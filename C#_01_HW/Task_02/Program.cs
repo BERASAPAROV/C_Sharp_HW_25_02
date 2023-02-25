@@ -3,7 +3,7 @@
 Console.WriteLine("Введите 2 числа и мы тебе скажем какое из них больше");
 Console.WriteLine("Введите свое первое число: ");
 string s_a = Console.ReadLine()!;
-Console.WriteLine("Введите свое первое число: ");
+Console.WriteLine("Введите свое второе число: ");
 string s_b = Console.ReadLine()!;
 
 int a = int.Parse(s_a);
