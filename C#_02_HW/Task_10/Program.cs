@@ -9,9 +9,7 @@ Console.WriteLine("Вывидите трёхзначное число и мы т
 int GetSecondDigit(int number)
 {
     Console.WriteLine(number);
-    while(number >= 100)
-    number /= 10;
-    return number % 10;
+    return number / 10 % 10;
 }
 
 int result = GetSecondDigit(new Random().Next(100, 1000));
