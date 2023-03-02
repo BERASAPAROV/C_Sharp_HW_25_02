@@ -6,15 +6,17 @@
 // 32679 -> 6
 
 Console.WriteLine("Вывидите трёхзначное число и мы тебе выведем третью цифру заданного числа");
-int ThirdDigit(int number);
-if (number > 100)
+void ThirdDigit(int number)
+{
+    Console.Write($"{number} -> ");
+    if (number < 100)
     {
         Console.WriteLine("третьей цифры нет");
-    }
-else 
-    {
-        number /= 10;
+        return;
     }
 
-int result = ThirdDigit(new Random().Next(100, 1000));
-Console.WriteLine(result);
+    while (number > 999) number /= 10;
+    Console.WriteLine($"третья цифра заданного числа -> {number % 10}");
+}
+
+ThirdDigit(int.Parse(Console.ReadLine()!));
